@@ -9,7 +9,7 @@ def decipher():
     with open('input.txt') as f:
         contents = f.read()
 
-    code_list = re.findall("{{[[]!\d{1,5}![\]]}}", contents)
+    code_list = re.findall("{{[\[]!\d{1,5}![\]]}}", contents)
 
     for word in code_list:
         code = re.findall('\d{1,5}', word)
